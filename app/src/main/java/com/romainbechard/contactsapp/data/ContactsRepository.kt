@@ -10,8 +10,6 @@ class ContactsRepository(
     private val dispatcher: CoroutineDispatcher
 ) {
 
-    private val baseUrl: String = "https://dummyapi.io/data/v1/user"
-
     suspend fun getContacts(): Result<List<User>> = withContext(dispatcher) {
         return@withContext try {
             val response = api.getContacts()
