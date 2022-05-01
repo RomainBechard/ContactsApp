@@ -18,7 +18,7 @@ class ContactListViewModel : ViewModel() {
         this.repository = repository
         viewModelScope.launch {
             when(val response = repository.getContacts()){
-                is Result.Success -> _contacts.postValue(response.data)
+                is Result.Success -> _contacts.postValue(response.data.sortedBy { it.lastName.first() })
                 is Result.Error -> Timber.d("An error occured while retrieving contacts")
             }
         }

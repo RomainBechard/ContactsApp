@@ -2,6 +2,7 @@ package com.romainbechard.contactsapp.ui.theme
 
 import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
@@ -29,7 +30,6 @@ val LightColorPalette = lightColors(
 
 @Composable
 fun ContactsAppTheme(
-    colors: Colors,
     content: @Composable () -> Unit
 ) {
     MaterialTheme(
